@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Login and register page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="box">
+    <div class="navig-bar">
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="form-box">
+        <div class="button-box">
+            <div id="bt"></div>
+            <button type="button" class="change-mode" onclick="login()">Log In</button>
+            <button type="button" class="change-mode" onclick="register()">Register</button>
+        </div>
+        <form id="login" class="inputs">
+            <input type="text" class="ip-field" placeholder="Enter User ID" required>
+            <input type="password" class="ip-field" placeholder="Enter password" required>
+            <button type="submit" class="submit-button">Log In</button>
+        </form>
+        <form id="register" class="inputs">
+            <input type="text" class="ip-field" placeholder="Enter Full Name" required>
+            <input type="text" class="ip-field" placeholder="Enter Email ID" required>
+            <input type="password" class="ip-field" placeholder="Enter password" required>
+            <input type="password" class="ip-field" placeholder="Confirm password" required>
+            <button type="submit" class="submit-button">Register</button>
+        </form>
+    </div>
+</div>
+<script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('bt');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+</script>
+</body>
+</html>
